@@ -4,10 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+                fontFamily:{
+            dmsans:["'DM Sans',sans-serif"]
+        }
+            }
+          }
+        }
+      </script>
 </head>
 <body>
-    
+    <div class="flex p-[21px] bg-black items-center justify-between">
+     <!-- sol -->
+      <div class="flex gap-[18px]">
+        <div>
+            <img src="./levitating.jpg" id="image" class="w-[64px] h-[64px]">
+        </div>
+        <div class="flex flex-col  justify-center ">
+            <h1 class="text-[#fff] font-bold text-lg font-dmsans" id="title">Levitating</h1>
+            <p class="text-[#b3b3b3] font-bold text-[15px] font-dmsans" id="artist">Dua Lipa</p>
+        </div>
+        <div class="flex   items-center ">
+            <img src="./greenHeart.svg">
+        </div>
+      </div>
+    <!-- orta -->
+     <div class="flex flex-col items-center justify-center">
+        <div class="flex gap-[24px]">
+             <button><img src="./shuffle.svg"></button>
+             <button id="prevButton" ><img src="./previousMusic.svg"></button>
+             <button id="playButton" class="w-12 h-12"><img src="./playMusic.svg" ></button>
+             <button id="nextButton"><img src="./skipMusic.svg" ></button>
+             <button><img src="./repeat.svg"></button>
+        </div>
+        <div class="w-[734px] h-20] flex items-center gap-2">
+              <p class="text-[#C4C4C4] font-bold text-[15px] font-dmsans" id="currentTime">0:00</p>
+              <div class="w-full relative h-[5px] rounded-[2.5px] bg-[#535353]" id="progress-container">
+                <div class="absolute top-0 left-0 w-[75%] h-full bg-gray-200 h-[5px] rounded-[2.5px]" id="progress"></div>
+              </div>
+              <p class="text-[#C4C4C4] font-bold text-[15px] font-dmsans w-20" id="duration">0:00</p>
+          </div>
+        </div>
+     <!-- sag -->
+      <div class="flex items-center gap-[4px]">
+        <div class="w-[50px] h-[50px]"><img src="./microphone.svg" class="w-[50px] h-[50px]"></div> 
+        <div class="w-[50px] h-[50px]"><img src="./dvd.svg" class="w-[50px] h-[50px]"></div> 
+        <div class="w-[50px] h-[50px]"><img src="./laptop.svg" class="w-[50px] h-[50px]"></div> 
+        <div class="w-[50px] h-[50px]"><img src="./speaker.svg" class="w-[50px] h-[50px]"></div> 
+        <div class="relative h-[5px] w-full rounded-[2.5px]">
+          <div class="absolute top-0 left-0 w-full h-full bg-gray-200 h-[5px] rounded-[2.5px]"></div>
+        </div>
+        <div class="w-[50px] h-[50px]"><img src="./expandingItem.svg" class="w-[50px] h-[50px]"></div> 
+      </div>
+    </div>
+  </div>
+  <audio src="./musics/levitating.mp3"  id="song"  ></audio>
     <script src="script.js"></script>
 </body>
 </html>
